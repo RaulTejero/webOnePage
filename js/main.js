@@ -13,3 +13,8 @@ buttonMenuHeader.addEventListener("click", () => {
     console.log(position);
   }
 });
+
+navMenu.addEventListener("click", () => {
+  navMenu.style.display = "none";
+  position = true;
+});

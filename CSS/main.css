@@ -8,6 +8,11 @@
   --principal-background: rgb(0, 0, 0);
   --grey-color: rgb(70, 70, 70);
   --head-logo-buttom-size: 80px;
+  --banner-height: 80vw;
+  --color-white: rgb(255, 255, 255);
+}
+.outline-none {
+  outline: none;
 }
 
 header[id="header"] {
@@ -66,27 +71,50 @@ header[id="header"] div button {
   font-size: 20px;
   background-color: var(--principal-background);
   border: none;
-  outline: none;
 }
-/* main > section {
-  padding:  20% 20%;
-} */
-/* div[id^="bann"] {
-  height: 400px;
-  margin-top: 30px;
+main {
   padding-top: var(--head-logo-buttom-size);
-  padding-top: 30px;
-} */
-/* div[id="banner-img"] {
+}
+main div[id^="bann"] {
+  height: var(--banner-height);
+  width: 100%;
+  position: absolute;
+}
+main div[id="banner-img"] {
   background-image: url(/img/bosque.jpg);
   background-size: cover;
-} */
-/* div[id="banner-img"]:before {
-  content: "llllll";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  z-index: -100;
+}
+main div[id="banner-deg"] {
   background-color: rgba(0, 0, 0, 0.6);
-} */
+  z-index: -10;
+}
+main div[id="banner"] {
+  z-index: -1;
+  color: var(--color-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+main section[id="home"] {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+main section[id="home"] h2,
+p,
+button {
+  margin: 20px 0;
+}
+main section[id="home"] p {
+  order: -1;
+}
+main section[id="home"] button {
+  font-size: 1em;
+  padding: 1em 1.7em;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+}

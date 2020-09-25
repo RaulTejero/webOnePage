@@ -25,7 +25,6 @@ header[id="header"] > h1 {
 }
 header[id="header"] div[id="header-logo"] {
   width: var(--head-logo-buttom-size);
-  height: var(--head-logo-buttom-size);
   background-image: url(/img/logo.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -64,7 +63,30 @@ header[id="header"] div[id="header-button"] {
 }
 header[id="header"] div button {
   color: var(--grey-color);
+  font-size: 20px;
   background-color: var(--principal-background);
   border: none;
   outline: none;
 }
+/* main > section {
+  padding:  20% 20%;
+} */
+/* div[id^="bann"] {
+  height: 400px;
+  margin-top: 30px;
+  padding-top: var(--head-logo-buttom-size);
+  padding-top: 30px;
+} */
+/* div[id="banner-img"] {
+  background-image: url(/img/bosque.jpg);
+  background-size: cover;
+} */
+/* div[id="banner-img"]:before {
+  content: "llllll";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+} */

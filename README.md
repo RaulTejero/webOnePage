@@ -8,3 +8,4 @@ Maquetacion y estilos de una onePage
     - Selectores de atributos
     - Pseudoelementos
     - Variables CSS
+- Javascript

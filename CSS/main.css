@@ -9,6 +9,7 @@
 :root {
   --link-hover-color: var(--main-home-color);
   --link-transition-color: color 0.4s ease-in-out;
+  --link-text-decoration: none;
   --font-weight-bold: 700;
   --header-footer-background-color: rgb(0, 0, 0);
   --header-footer-color: rgb(102, 102, 102);
@@ -22,12 +23,12 @@
   --main-home-button-transition-background: background-color 0.4s ease-in-out;
   --main-home-font-family: var(--header-font-family);
   --main-home-button-font-family: "Roboto", sans-serif;
-  --main-section-margin-vertical: 50px;
+  --main-section-margin-vertical: 100px;
 }
 .div-line {
-  width: 70px;
-  height: 1px;
-  margin: 20px auto 20px auto;
+  width: 50px;
+  height: 0.8px;
+  margin: 10px auto 50px auto;
   background-color: var(--header-footer-background-color);
 }
 header[id="header"] {
@@ -47,7 +48,7 @@ header[id="header"] {
 header[id="header"] > h1 {
   display: none;
 }
-header[id="header"] div[id="header-logo"] {
+header[id="header"] div:nth-child(2) {
   width: var(--header-logo-buttom-width);
   background-image: url(../img/logo.png);
   background-repeat: no-repeat;
@@ -77,7 +78,7 @@ header[id="header"] li {
 }
 header[id="header"] nav a {
   color: var(--header-footer-color);
-  text-decoration: none;
+  text-decoration: var(--link-text-decoration);
   transition: var(--link-transition-color);
 }
 header[id="header"] nav a:hover {
@@ -103,21 +104,21 @@ header[id="header"] div button:hover {
   color: var(--link-hover-color);
   cursor: pointer;
 }
-main div[id^="bann"] {
+main > div:nth-child(1n + 1) {
   height: var(--main-home-height);
   width: 100%;
   position: absolute;
 }
-main div[id="banner-img"] {
+main > div:first-child {
   background-image: url(../img/bosque.jpg);
   background-size: cover;
   z-index: -100;
 }
-main div[id="banner-deg"] {
+main > div:nth-child(2) {
   background-color: var(--main-home-banner-opacity);
   z-index: -10;
 }
-main div[id="banner"] {
+main > div:nth-child(3) {
   color: var(--main-home-color);
   position: relative;
   display: flex;
@@ -158,24 +159,85 @@ main section[id="home"] button:hover {
   color: var(--header-footer-color);
   background-color: var(--main-home-color);
 }
-main > section:nth-child(4) {
+main section[id="about"] {
   margin-top: var(--main-section-margin-vertical);
   margin-bottom: var(--main-section-margin-vertical);
 }
-main > section:nth-child(4) h2 {
+main > section[id="about"] h2 {
   display: none;
 }
-main > section:nth-child(4) > article:nth-child(2) {
-  padding: 0 5%;
+main > section[id="about"] > article:nth-child(2) {
+  padding: 0 var(--main-section-paddin-oriz-large);
+  text-align: center;
+  margin-bottom: var(--main-section-margin-vertical);
+}
+main > section[id="about"] > article:nth-child(2) h3 {
+  font-family: var(--header-font-family);
+  font-size: var(--main-about-title-font-size);
+}
+main > section[id="about"] > article:last-child {
+  padding: 0 var(--main-section-paddin-oriz-short);
+}
+main > section[id="about"] > article:last-child h3 {
+  text-align: center;
+  font-family: var(--header-font-family);
+  font-size: var(--main-about-title-font-size);
+}
+main > section[id="about"] > article:last-child > div:last-child figure {
+  text-align: center;
+  margin-bottom: var(--main-section-margin-vertical);
+}
+main
+  > section[id="about"]
+  > article:last-child
+  > div:last-child
+  > figure
+  img:first-child {
+  border-radius: 50%;
+  margin-bottom: var(--main-about-figue-img-marg-vert);
+}
+main
+  > section[id="about"]
+  > article:last-child
+  > div:last-child
+  > figure
+  figcaption {
+  margin-bottom: -17px;
+  font-family: var(--main-home-font-family);
+  font-weight: var(--font-weight-bold);
+}
+main
+  > section[id="about"]
+  > article:last-child
+  > div:last-child
+  > figure
+  p:nth-child(3) {
+  color: var(--header-footer-color);
+  font-size: 0.8em;
+  font-weight: var(--font-weight-bold);
+}
+main
+  > section[id="about"]
+  > article:last-child
+  > div:last-child
+  > figure
+  img:nth-child(6) {
+  width: 15px;
+  vertical-align: bottom;
+}
+main > section[id="about"] > article:last-child > div:last-child > figure > a {
+  color: var(--header-footer-background-color);
+  text-decoration: var(--link-text-decoration);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1em;
+}
+main section[id="services"],
+section[id="contact"] {
   text-align: center;
 }
-/* main > section:nth-child(4) > article:nth-child(2) div {
-  width: 70px;
-  height: 1px;
-  margin: 20px auto 20px auto;
-  background-color: var(--header-footer-background-color);
-} */
-main > section:nth-child(4) > article:last-child h3 {
-  margin: 0 auto 0 auto;
-  border: 1px solid;
+:root {
+  --main-section-paddin-oriz-short: 5%;
+  --main-section-paddin-oriz-large: 15%;
+  --main-about-title-font-size: 1.5em;
+  --main-about-figue-img-marg-vert: 35px;
 }

@@ -22,6 +22,13 @@
   --main-home-button-transition-background: background-color 0.4s ease-in-out;
   --main-home-font-family: var(--header-font-family);
   --main-home-button-font-family: "Roboto", sans-serif;
+  --main-section-margin-vertical: 50px;
+}
+.div-line {
+  width: 70px;
+  height: 1px;
+  margin: 20px auto 20px auto;
+  background-color: var(--header-footer-background-color);
 }
 header[id="header"] {
   background-color: var(--header-footer-background-color);
@@ -150,4 +157,25 @@ main section[id="home"] button:hover {
   cursor: pointer;
   color: var(--header-footer-color);
   background-color: var(--main-home-color);
+}
+main > section:nth-child(4) {
+  margin-top: var(--main-section-margin-vertical);
+  margin-bottom: var(--main-section-margin-vertical);
+}
+main > section:nth-child(4) h2 {
+  display: none;
+}
+main > section:nth-child(4) > article:nth-child(2) {
+  padding: 0 5%;
+  text-align: center;
+}
+/* main > section:nth-child(4) > article:nth-child(2) div {
+  width: 70px;
+  height: 1px;
+  margin: 20px auto 20px auto;
+  background-color: var(--header-footer-background-color);
+} */
+main > section:nth-child(4) > article:last-child h3 {
+  margin: 0 auto 0 auto;
+  border: 1px solid;
 }

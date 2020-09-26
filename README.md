@@ -9,3 +9,5 @@ Maquetacion y estilos de una onePage
     - Pseudoelementos
     - Variables CSS
 - Javascript
+  - condicionales
+  - Eventos

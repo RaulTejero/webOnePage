@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,116 +7,147 @@
 }
 
 :root {
-  --principal-background: rgb(0, 0, 0);
-  --grey-color: rgb(70, 70, 70);
-  --head-logo-buttom-size: 80px;
-  --banner-height: 80vw;
-  --color-white: rgb(255, 255, 255);
+  --link-hover-color: var(--main-home-color);
+  --link-transition-color: color 0.4s ease-in-out;
+  --font-weight-bold: 700;
+  --header-footer-background-color: rgb(0, 0, 0);
+  --header-footer-color: rgb(102, 102, 102);
+  --header-font-family: "Open Sans", sans-serif;
+  --header-font-size: 1em;
+  --header-logo-buttom-size: 50px;
+  --header-logo-buttom-width: 100px;
+  --main-home-banner-opacity: rgba(0, 0, 0, 0.6);
+  --main-home-height: 80vw;
+  --main-home-color: rgb(255, 255, 255);
+  --main-home-button-transition-background: background-color 0.4s ease-in-out;
+  --main-home-font-family: var(--header-font-family);
+  --main-home-button-font-family: "Roboto", sans-serif;
 }
-.outline-none {
-  outline: none;
-}
-
 header[id="header"] {
-  background-color: var(--principal-background);
-  color: var(--grey-color);
+  background-color: var(--header-footer-background-color);
+  color: var(--header-footer-color);
+  font-family: var(--header-font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--header-font-size);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 30px;
   position: fixed;
+  z-index: 1000;
   width: 100%;
 }
 header[id="header"] > h1 {
   display: none;
 }
 header[id="header"] div[id="header-logo"] {
-  width: var(--head-logo-buttom-size);
-  background-image: url(/img/logo.png);
+  width: var(--header-logo-buttom-width);
+  background-image: url(../img/logo.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 header[id="header"] div[id="header-logo"]:hover {
-  background-image: url(/img/logo.gif);
+  background-image: url(../img/logo.gif);
 }
 header[id="header"] nav {
   list-style: none;
   position: absolute;
-  top: var(--head-logo-buttom-size);
-  background-color: var(--principal-background);
+  top: var(--header-logo-buttom-size);
+  background-color: var(--header-footer-background-color);
   width: 100%;
   left: 0;
   display: none;
-  /* background-color: var(--principal-background); */
+  /* background-color: var(--header-footer-background-color); */
   /* width: 80%; */
   /* display: flex; */
   /* justify-content: space-between; */
   /* align-items: center; */
 }
 header[id="header"] li {
-  border-bottom: 2px solid var(--grey-color);
+  border-bottom: 1px solid var(--header-footer-color);
   padding: 10px;
   text-align: center;
 }
-header[id="header"] a {
-  color: inherit;
+header[id="header"] nav a {
+  color: var(--header-footer-color);
   text-decoration: none;
+  transition: var(--link-transition-color);
+}
+header[id="header"] nav a:hover {
+  color: var(--link-hover-color);
 }
 header[id="header"] div[id="header-button"] {
-  width: var(--head-logo-buttom-size);
-  height: var(--head-logo-buttom-size);
+  width: var(--header-logo-buttom-width);
+  height: var(--header-logo-buttom-size);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 header[id="header"] div button {
-  color: var(--grey-color);
-  font-size: 20px;
-  background-color: var(--principal-background);
+  color: var(--header-footer-color);
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--header-footer-background-color);
   border: none;
+  transition: var(--link-transition-color);
 }
-main {
-  padding-top: var(--head-logo-buttom-size);
+header[id="header"] div button:hover {
+  color: var(--link-hover-color);
+  cursor: pointer;
 }
 main div[id^="bann"] {
-  height: var(--banner-height);
+  height: var(--main-home-height);
   width: 100%;
   position: absolute;
 }
 main div[id="banner-img"] {
-  background-image: url(/img/bosque.jpg);
+  background-image: url(../img/bosque.jpg);
   background-size: cover;
   z-index: -100;
 }
 main div[id="banner-deg"] {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--main-home-banner-opacity);
   z-index: -10;
 }
 main div[id="banner"] {
-  z-index: -1;
-  color: var(--color-white);
+  color: var(--main-home-color);
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 main section[id="home"] {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 main section[id="home"] h2,
 p,
 button {
   margin: 20px 0;
+  text-align: center;
+}
+main section[id="home"] h2,
+p {
+  font-family: var(--header-font-family);
 }
 main section[id="home"] p {
   order: -1;
 }
 main section[id="home"] button {
-  font-size: 1em;
-  padding: 1em 1.7em;
-  color: var(--color-white);
+  font-size: 0.9em;
+  font-family: var(--main-home-button-font-family);
+  padding: 1em 2.5em;
+  color: var(--main-home-color);
   background-color: transparent;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--main-home-color);
+  transition: var(--link-transition-color);
+  transition: var(--main-home-button-transition-background);
+}
+main section[id="home"] button:hover {
+  cursor: pointer;
+  color: var(--header-footer-color);
+  background-color: var(--main-home-color);
 }

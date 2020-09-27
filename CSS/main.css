@@ -318,7 +318,7 @@ main section[id="contact"] form :nth-child(3) {
   border-bottom: 1px solid;
   border-color: var(--header-footer-color);
 }
-main section[id="contact"] > article {
+main section[id="contact"] div > article {
   text-align: center;
 }
 main section[id="contact"] label {

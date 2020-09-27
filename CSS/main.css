@@ -412,7 +412,6 @@ footer section:nth-child(3) p {
   section[id="about"] article:nth-child(3) div:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
-    background-color: red;
   }
   section[id="about"] article:nth-child(3) div:nth-child(3) figure {
     width: 50%;

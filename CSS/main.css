@@ -305,7 +305,7 @@ main section[id="contact"] form {
   flex-direction: column;
 }
 main section[id="contact"] div > form :nth-child(1n + 1),
-main section[id="contact"] > article :nth-child(1n + 1) {
+main section[id="contact"] div > article :nth-child(1n + 1) {
   margin: var(--main-contact-text-margin-vertical);
   font-family: var(--header-font-family);
 }
@@ -320,6 +320,7 @@ main section[id="contact"] form :nth-child(3) {
 }
 main section[id="contact"] div > article {
   text-align: center;
+  padding: 20px 0;
 }
 main section[id="contact"] label {
   font-size: 0.8em;
@@ -347,19 +348,20 @@ footer {
   padding: 20px 120px;
   text-align: center;
 }
-footer button:first-child {
-  width: 20px;
-  height: 20px;
+footer > a:first-child {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 3px solid var(--header-footer-color);
   border: none;
-  background-color: var(--header-footer-background-color);
+  margin-left: auto;
+  margin-right: auto;
   border-top: var(--main-footer-div-butom-border);
   border-left: var(--main-footer-div-butom-border);
-  margin: 20px auto;
   transform: rotate(45deg);
-  cursor: pointer;
   transition: border-color 0.4s ease-in-out;
 }
-footer button:first-child:hover {
+footer a:first-child:hover {
   border-color: var(--link-hover-color);
 }
 footer section:nth-child(2) ul {
@@ -418,17 +420,12 @@ footer section:nth-child(3) p {
   }
   section[id="contact"] div:nth-child(2) {
     display: flex;
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
-
-    /* background-color: green; */
   }
   section[id="contact"] div:nth-child(2) form {
-    width: 70%;
+    width: 65%;
   }
-  section[id="contact"] article:nth-child(3) {
-    /* width: 28%; */
-    /* background: red; */
+  section[id="contact"] div article:nth-child(2) {
+    width: 28%;
   }
 }
 @media screen and (min-width: 900px) {

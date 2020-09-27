@@ -28,6 +28,11 @@
   --main-section-paddin-oriz-large: 15%;
   --main-about-title-font-size: 1.5em;
   --main-about-figue-img-marg-vert: 35px;
+  --main-services-article-background-color: rgba(128, 128, 128, 0.062);
+  --main-services-article-margin_padding-vertical: 20px;
+  --main-contact-padding: 40px;
+  --main-contact-text-margin-vertical: 10px;
+  --main-footer-div-butom-border: 4px solid var(--header-footer-color);
 }
 .div-line {
   width: 50px;
@@ -138,10 +143,6 @@ main section[id="home"] {
 main section[id="home"] p {
   margin: 20px 0;
 }
-main section[id="home"] button {
-  margin: 20px 0;
-  text-align: center;
-}
 main section[id="home"] h2,
 p {
   font-family: var(--header-font-family);
@@ -150,6 +151,8 @@ main section[id="home"] p {
   order: -1;
 }
 main section[id="home"] button {
+  margin: 20px 0;
+  text-align: center;
   font-size: 0.9em;
   font-family: var(--main-home-button-font-family);
   padding: 1em 2.5em;
@@ -216,10 +219,18 @@ main
   > article:last-child
   > div:last-child
   > figure
-  p:nth-child(3) {
+  p:nth-child(3),
+section[id="about"]
+  > article:last-child
+  > div:last-child
+  > figure
+  p:nth-child(5) {
   color: var(--header-footer-color);
   font-size: 0.8em;
+  font-family: var(--main-home-button-font-family);
   font-weight: var(--font-weight-bold);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 main
   > section[id="about"]
@@ -304,10 +315,86 @@ main section[id="contact"] > article :nth-child(1n + 1) {
   margin: var(--main-contact-text-margin-vertical);
   font-family: var(--header-font-family);
 }
-
+main section[id="contact"] form :nth-child(1),
+main section[id="contact"] form :nth-child(2),
+main section[id="contact"] form :nth-child(3) {
+  padding-bottom: 10px;
+  color: var(--header-footer-color);
+  border: none;
+  border-bottom: 1px solid;
+  border-color: var(--header-footer-color);
+}
+main section[id="contact"] > article {
+  text-align: center;
+}
+main section[id="contact"] label {
+  font-size: 0.8em;
+  font-family: var(--header-font-family);
+  color: var(--header-footer-color);
+}
+main section[id="contact"] textarea {
+  resize: none;
+  border: none;
+  color: var(--header-footer-color);
+  background-color: var(--main-services-article-background-color);
+}
+main section[id="contact"] button[type="submit"] {
+  color: var(--header-footer-color);
+  padding: 1em 2em;
+  border: none;
+  font-family: var(--main-home-button-font-family);
+  font-weight: 900;
+}
+main section[id="contact"] button[type="submit"]:hover {
+  cursor: pointer;
+}
+footer {
+  background-color: var(--header-footer-background-color);
+  padding: 20px 120px;
+  text-align: center;
+}
+footer button:first-child {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: var(--header-footer-background-color);
+  border-top: var(--main-footer-div-butom-border);
+  border-left: var(--main-footer-div-butom-border);
+  margin: 20px auto;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: border-color 0.4s ease-in-out;
+}
+footer button:first-child:hover {
+  border-color: var(--link-hover-color);
+}
+footer section:nth-child(2) ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer section:nth-child(2) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: var(--header-footer-color);
+  border-radius: 50%;
+  transition: var(--main-home-button-transition-background);
+}
+footer section:nth-child(2) a:hover {
+  background-color: var(--link-hover-color);
+}
+footer section:nth-child(2) img {
+  width: 30px;
+  height: 30px;
+}
+footer section:nth-child(3) p {
+  color: var(--header-footer-color);
+  margin: 20px auto;
+}
 :root {
-  --main-services-article-background-color: rgba(128, 128, 128, 0.062);
-  --main-services-article-margin_padding-vertical: 20px;
-  --main-contact-padding: 40px;
-  --main-contact-text-margin-vertical: 10px;
 }

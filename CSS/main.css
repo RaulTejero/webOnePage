@@ -247,17 +247,28 @@ section[id="contact"] h2 {
 }
 main section[id="services"] article {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
+}
+
+main section[id="services"] article:nth-child(odd) {
+  background-color: var(--main-services-article-background-color);
+}
+main section[id="services"] article:nth-child(odd) header {
+  order: -;
+}
+main section[id="services"] article p {
+  display: none;
 }
 main section[id="services"] div {
   /* background-image: url(../img/service-1.jpg); */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  margin: 0 30px 40px;
+  background-size: contain;
+  /* margin: 0 30px 40px; */
   width: 60vw;
   height: 60vw;
 }
@@ -277,4 +288,5 @@ main section[id="services"] article:nth-child(6) div:nth-child(3) {
   background-image: url(../img/service-1.jpg);
 }
 :root {
+  --main-services-article-background-color: rgba(128, 128, 128, 0.062);
 }

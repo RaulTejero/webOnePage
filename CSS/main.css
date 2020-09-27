@@ -15,8 +15,6 @@
   --header-footer-color: rgb(102, 102, 102);
   --header-font-family: "Open Sans", sans-serif;
   --header-font-size: 1em;
-  --header-logo-buttom-size: 50px;
-  --header-logo-buttom-width: 100px;
   --main-home-banner-opacity: rgba(0, 0, 0, 0.6);
   --main-home-height: 80vw;
   --main-home-color: rgb(255, 255, 255);
@@ -42,14 +40,13 @@
 }
 header[id="header"] {
   background-color: var(--header-footer-background-color);
-  color: var(--header-footer-color);
   font-family: var(--header-font-family);
   font-weight: var(--font-weight-bold);
   font-size: var(--header-font-size);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 30px;
+  align-items: center;
+  padding: 10px 30px;
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -58,10 +55,12 @@ header[id="header"] > h1 {
   display: none;
 }
 header[id="header"] div:nth-child(2) {
-  width: var(--header-logo-buttom-width);
+  height: 30px;
+  width: 30px;
   background-image: url(../img/logo.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 header[id="header"] div:nth-child(2):hover {
   background-image: url(../img/logo.gif);
@@ -69,20 +68,18 @@ header[id="header"] div:nth-child(2):hover {
 header[id="header"] nav {
   list-style: none;
   position: absolute;
-  top: var(--header-logo-buttom-size);
+  top: 50px;
   background-color: var(--header-footer-background-color);
   width: 100%;
   left: 0;
-  display: none;
-  /* background-color: var(--header-footer-background-color); */
-  /* width: 80%; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 header[id="header"] li {
   border-bottom: 1px solid var(--header-footer-color);
   padding: 10px;
+  width: 100%;
   text-align: center;
 }
 header[id="header"] nav a {
@@ -93,14 +90,7 @@ header[id="header"] nav a {
 header[id="header"] nav a:hover {
   color: var(--link-hover-color);
 }
-header[id="header"] div[id="header-button"] {
-  width: var(--header-logo-buttom-width);
-  height: var(--header-logo-buttom-size);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header[id="header"] div button {
+header[id="header"] div:last-child button {
   color: var(--header-footer-color);
   font-family: var(--header-font-family);
   font-size: var(--header-font-size);
@@ -109,7 +99,7 @@ header[id="header"] div button {
   border: none;
   transition: var(--link-transition-color);
 }
-header[id="header"] div button:hover {
+header[id="header"] div:last-child button:hover {
   color: var(--link-hover-color);
   cursor: pointer;
 }
@@ -182,6 +172,10 @@ main > section[id="about"] > article:nth-child(2) {
 main > section[id="about"] > article:nth-child(2) h3 {
   font-family: var(--header-font-family);
   font-size: var(--main-about-title-font-size);
+}
+main > section[id="about"] > article:nth-child(2) p:nth-child(3),
+section[id="about"] > article:nth-child(2) p:nth-child(4) {
+  margin-bottom: 15px;
 }
 main > section[id="about"] > article:last-child {
   padding: 0 var(--main-section-paddin-oriz-short);
@@ -396,5 +390,50 @@ footer section:nth-child(3) p {
   color: var(--header-footer-color);
   margin: 20px auto;
 }
-:root {
+@media screen and (min-width: 720px) {
+  header[id="header"] div:last-child button {
+    display: none;
+  }
+  header[id="header"] div:last-child {
+  }
+  header[id="header"] nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+  }
+  header[id="header"] nav ul {
+    width: 100%;
+  }
+  header[id="header"] nav li {
+    border: none;
+    padding: initial;
+  }
+  section[id="about"] article:nth-child(3) div:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+  }
+  section[id="about"] article:nth-child(3) div:nth-child(3) figure {
+    width: 50%;
+  }
+  section[id="contact"] div:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+
+    /* background-color: green; */
+  }
+  section[id="contact"] div:nth-child(2) form {
+    width: 70%;
+  }
+  section[id="contact"] article:nth-child(3) {
+    /* width: 28%; */
+    /* background: red; */
+  }
+}
+@media screen and (min-width: 900px) {
+  section[id="about"] article:nth-child(3) div:nth-child(3) figure {
+    width: 33.3%;
+  }
 }

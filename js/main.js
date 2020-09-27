@@ -1,5 +1,6 @@
 const buttonMenuHeader = document.querySelector("#header-button");
 const navMenu = document.querySelector("#nav-menu");
+const buttonUP = document.querySelector("button-up");
 
 var position = true;
 buttonMenuHeader.addEventListener("click", () => {
@@ -18,3 +19,7 @@ navMenu.addEventListener("click", () => {
   navMenu.style.display = "none";
   position = true;
 });
+
+if (window.matchMedia("(min-width: 700px)")) {
+  navMenu.style.display = "block";
+}

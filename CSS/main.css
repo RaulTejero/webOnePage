@@ -291,7 +291,23 @@ main section[id="services"] article:nth-child(5) div:nth-child(3) {
 main section[id="services"] article:nth-child(6) div:nth-child(3) {
   background-image: url(../img/service-1.jpg);
 }
+main section[id="contact"] > div,
+main section[id="contact"] > article {
+  padding: var(--main-contact-padding) var(--main-contact-padding);
+}
+main section[id="contact"] form {
+  display: flex;
+  flex-direction: column;
+}
+main section[id="contact"] div > form :nth-child(1n + 1),
+main section[id="contact"] > article :nth-child(1n + 1) {
+  margin: var(--main-contact-text-margin-vertical);
+  font-family: var(--header-font-family);
+}
+
 :root {
   --main-services-article-background-color: rgba(128, 128, 128, 0.062);
   --main-services-article-margin_padding-vertical: 20px;
+  --main-contact-padding: 40px;
+  --main-contact-text-margin-vertical: 10px;
 }

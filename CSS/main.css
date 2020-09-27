@@ -135,9 +135,10 @@ main section[id="home"] {
   flex-direction: column;
   align-items: center;
 }
-main section[id="home"] h2,
-p,
-button {
+main section[id="home"] p {
+  margin: 20px 0;
+}
+main section[id="home"] button {
   margin: 20px 0;
   text-align: center;
 }

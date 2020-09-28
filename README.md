@@ -6,8 +6,5 @@ Maquetacion y estilos de una onePage
     - Selectores de tag
     - Selectores descendientes
     - Selectores de atributos
-    - Pseudoelementos
+    - Pseudoselectores
     - Variables CSS
-- Javascript
-  - condicionales
-  - Eventos

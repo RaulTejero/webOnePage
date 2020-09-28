@@ -416,7 +416,7 @@ footer section:nth-child(3) p {
     flex-wrap: wrap;
   }
   section[id="about"] article:nth-child(3) div:nth-child(3) figure {
-    width: 50%;
+    width: 45%;
   }
   section[id="services"] article p {
     display: block;
@@ -433,6 +433,6 @@ footer section:nth-child(3) p {
 }
 @media screen and (min-width: 900px) {
   section[id="about"] article:nth-child(3) div:nth-child(3) figure {
-    width: 33.3%;
+    width: 30%;
   }
 }

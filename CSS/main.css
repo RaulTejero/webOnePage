@@ -417,8 +417,17 @@ footer section:nth-child(3) p {
   section[id="about"] article:nth-child(3) div:nth-child(3) figure {
     width: 45%;
   }
-  section[id="services"] > article > p {
-    display: block !important;
+  main section[id="services"] article {
+    /* flex-wrap: nowrap; */
+  }
+  main section[id="services"] article:nth-child(2n) header {
+    order: 0;
+  }
+  main section[id="services"] > article > p {
+    display: block;
+  }
+  main section[id="services"] article:nth-child(2) div:nth-child(3) {
+    width: 50%;
   }
   section[id="contact"] div:nth-child(2) {
     display: flex;

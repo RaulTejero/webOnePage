@@ -420,6 +420,17 @@ footer section:nth-child(3) p {
   main section[id="services"] article {
     /* flex-wrap: nowrap; */
   }
+  main section[id="services"] article header {
+    width: 50%;
+    /* height: 50vw; */
+  }
+  main section[id="services"] > article > p {
+    width: 50%;
+  }
+  main section[id="services"] div {
+    width: 50%;
+    height: 50vw;
+  }
   main section[id="services"] article:nth-child(2n) header {
     order: 0;
   }
